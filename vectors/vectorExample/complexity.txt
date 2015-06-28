@@ -1,0 +1,4 @@
+In regards to the Vector library, the complexity is constant 
+for the default constructor (1), and for the move constructors (5) (unless
+alloc is different from x's allocator). For all other cases the complexity is linear
+in the resulting container size. Additionally, if InputIterator in the range constructor (3) is not at least of a forward iterator category, the new capacity cannot be determined beforehand and the construction incurs in additional logarithmic complexity in size (reallocations while growing).
